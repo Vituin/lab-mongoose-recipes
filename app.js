@@ -1,3 +1,6 @@
+const express = require(`express`)
+const app = express()
+
 const mongoose = require('mongoose');
 
 // Import of the model Recipe from './models/Recipe.model.js'
@@ -21,3 +24,5 @@ mongoose
   .catch(error => {
     console.error('Error connecting to the database', error);
   });
+
+app.listen(3000, () => console.log(`Server listening...`))
